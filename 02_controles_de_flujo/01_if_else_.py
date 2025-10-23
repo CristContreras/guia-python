@@ -40,7 +40,23 @@ def if_en_linea():
     x = 10
     if x > 5: print("x es mayor que 5")
 
+def if_busqueda_simple():
+    nombres = ["Ana", "Carlos", "Pedro"] #lista
+    if "Ana" in nombres: 
+        print("Encontrado")
+    else:
+        print("No está")
 
+def if_any_for():
+    nombres = ["Ana", "Carlos", "Pedro"]
+    nuevo = "Ana"
+
+    if not any(nombre == nuevo for nombre in nombres): #si no existe el nombre
+        nombres.append(nuevo)
+    else:
+        print("Ese nombre ya existe")
+
+    print(nombres)
 # -------------------------
 # Pruebas
 # -------------------------
